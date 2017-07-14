@@ -1,0 +1,56 @@
+{
+  "listeners": [
+    {
+      "address": "tcp://0.0.0.0:9001",
+      "filters": [
+        {
+          "type": "read",
+          "name": "echo",
+          "config": {}
+        }
+      ]
+    }
+  ],
+  "admin":
+  {
+    "access_log_path": "/dev/null",
+    "address": "tcp://0.0.0.0:9009"
+  },
+  "cluster_manager": {
+    "local_cluster_name" : "pause",
+    "clusters":
+    [
+           {
+            "name": "pause",
+            "type": "strict_dns",
+            "connect_timeout_ms": 250,
+            "lb_type": "round_robin",
+            "hosts": [{"url": "tcp://pause:444"}]
+          }
+    ],
+    "sds" :
+    {
+            "cluster":
+            {
+                    "name": "sds_cluster",
+                    "type": "strict_dns",
+                    "connect_timeout_ms": 250,
+                    "lb_type": "round_robin",
+                    "hosts": [{"url": "tcp://eds:80"}]
+            },
+            "refresh_delay_ms": 30000
+    },
+    "cds" :
+    {
+            "cluster":
+            {
+                    "name": "cds_cluster",
+                    "type": "strict_dns",
+                    "connect_timeout_ms": 250,
+                    "lb_type": "round_robin",
+                    "hosts": [{"url": "tcp://eds:80"}]
+            },
+            "refresh_delay_ms": 30000
+    }
+  }
+}

@@ -1,0 +1,37 @@
+version: '2'
+
+networks:
+  envoy-pvmc: {}
+
+services:
+  nginx:
+    image: nginx:1.11.4-alpine
+    container_name: eds
+    volumes:
+      - ./eds:/usr/share/nginx/html
+    networks:
+      - envoy-pvmc
+
+  envoy:
+    image: lyft/envoy:c7edb365623d6a3e3478ffa3ad21fbb93745164b
+    container_name: envoy
+    volumes:
+      - ./envoy.json:/usr/local/etc/envoy.json
+    entrypoint:
+      - '/usr/local/bin/envoy'
+      - '-c /usr/local/etc/envoy.json'
+      - '--service-cluster pvmc-cluster'
+      - '--service-node pvmc-node-001'
+      - '--log-level trace'
+    networks:
+      - envoy-pvmc
+    depends_on:
+      - nginx
+
+  pause:
+    image: gcr.io/google_containers/pause-amd64:3.0
+    container_name: local-svc
+    networks:
+      - envoy-pvmc
+    depends_on:
+      - envoy

@@ -1,0 +1,193 @@
+Attaching to envoy
+[36menvoy    |[0m [2017-07-14 11:02:20.533][1][warning][main] source/server/server.cc:131] initializing epoch 0 (hot restart version=8.2490552)
+[36menvoy    |[0m [2017-07-14 11:02:20.534][1][info][main] source/server/server.cc:136] admin address: 0.0.0.0:9009
+[36menvoy    |[0m [2017-07-14 11:02:20.535][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.535][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 5000 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:20.535][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:51] cm init: adding: cluster=sds_cluster primary=1 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.535][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 4687 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:51] cm init: adding: cluster=cds_cluster primary=2 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for pause
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 3124 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:51] cm init: adding: cluster=pause primary=3 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][info][config] source/server/configuration_impl.cc:43] loading 1 listener(s)
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][info][config] source/server/configuration_impl.cc:45] listener #0:
+[36menvoy    |[0m [2017-07-14 11:02:20.536][1][debug][config] source/server/listener_manager_impl.cc:195] begin add/update listener: name=e76265e6-77ca-4aed-9ea1-d1bc5bcbcfaa hash=10510860088270290613
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][config] source/server/listener_manager_impl.cc:26]   filter #0:
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][config] source/server/listener_manager_impl.cc:27]     type: read
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][config] source/server/listener_manager_impl.cc:28]     name: echo
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][config] source/server/listener_manager_impl.cc:147] add active listener: name=e76265e6-77ca-4aed-9ea1-d1bc5bcbcfaa, hash=10510860088270290613, address=0.0.0.0:9001
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][config] source/server/configuration_impl.cc:100] loading tracing configuration
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][warning][main] source/server/server.cc:298] starting main dispatch loop
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][debug][upstream] source/common/upstream/upstream_impl.cc:467] DNS hosts have changed for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:77] cm init: removing: cluster=sds_cluster primary=2 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][debug][upstream] source/common/upstream/upstream_impl.cc:467] DNS hosts have changed for eds
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:77] cm init: removing: cluster=cds_cluster primary=1 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.537][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 3124 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for pause
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:77] cm init: removing: cluster=pause primary=0 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:117] cm init: initializing cds
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][upstream] source/common/upstream/cds_api_impl.cc:41] cds: starting request
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:199] [C0][S21621063285127] cluster 'cds_cluster' match for URL '/v1/clusters/pvmc-cluster/pvmc-node-001'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   ':method':'GET'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   ':path':'/v1/clusters/pvmc-cluster/pvmc-node-001'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   ':authority':'cds_cluster'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   'x-envoy-internal':'true'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   'x-forwarded-for':'172.18.0.3'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   'x-envoy-expected-rq-timeout-ms':'1000'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:251] [C0][S21621063285127]   ':scheme':'http'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][pool] source/common/http/http1/conn_pool.cc:61] creating a new connection
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][info][client] source/common/http/codec_client.cc:21] [C1] connecting
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][connection] source/common/network/connection_impl.cc:420] [C1] connecting to 172.18.0.2:80
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][connection] source/common/network/connection_impl.cc:429] [C1] connection in progress
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][pool] source/common/http/http1/conn_pool.cc:87] queueing request due to no available connections
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:268] [C1] socket event: 2
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:379] [C1] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][connection] source/common/network/connection_impl.cc:389] [C1] connected
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][client] source/common/http/codec_client.cc:50] [C1] connected
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][pool] source/common/http/http1/conn_pool.cc:207] [C1] attaching to next request
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:737] [C0][S21621063285127] pool ready
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:252] [C1] writing 185 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:358] [C1] write returns: 185
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:268] [C1] socket event: 2
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:379] [C1] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:268] [C1] socket event: 3
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:308] [C1] read returns: 453
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:308] [C1] read returns: -1
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][connection] source/common/network/connection_impl.cc:316] [C1] read error: 11
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:282] [C1] parsing 453 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Server value=nginx/1.11.4
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Date value=Fri, 14 Jul 2017 11:02:20 GMT
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Content-Type value=application/octet-stream
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Content-Length value=201
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Last-Modified value=Fri, 14 Jul 2017 10:30:33 GMT
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Connection value=keep-alive
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=ETag value="59689d49-c9"
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:338] [C1] headers complete
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C1] completed header: key=Accept-Ranges value=bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][router] source/common/router/router.cc:465] [C0][S21621063285127] upstream headers complete: end_stream=false
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:75] async http request response headers (end_stream=false):
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'server':'nginx/1.11.4'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'date':'Fri, 14 Jul 2017 11:02:20 GMT'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'content-type':'application/octet-stream'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'content-length':'201'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'last-modified':'Fri, 14 Jul 2017 10:30:33 GMT'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'connection':'keep-alive'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'etag':'"59689d49-c9"'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   'accept-ranges':'bytes'
+[36menvoy    |[0m [2017-07-14 11:02:20.538][1][debug][http] source/common/http/async_client_impl.cc:78]   ':status':'200'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][http] source/common/http/async_client_impl.cc:78]   'x-envoy-upstream-service-time':'0'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][http] source/common/http/async_client_impl.cc:89] async http request response data (length=201 end_stream=false)
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][client] source/common/http/codec_client.cc:79] [C1] response complete
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][main] source/common/event/dispatcher_impl.cc:116] item added to deferred deletion list (size=1)
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][http] source/common/http/async_client_impl.cc:89] async http request response data (length=0 end_stream=true)
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][upstream] source/common/upstream/cds_api_impl.cc:49] cds: parsing response
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:51] cm init: adding: cluster=svc1 primary=0 secondary=1
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][info][upstream] source/common/upstream/cds_api_impl.cc:60] cds: add/update cluster 'svc1'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:98] cm init: initializing secondary clusters
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][upstream] source/common/upstream/sds_subscription.cc:87] starting sds refresh for cluster: svc1
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:199] [C0][S96779862561392] cluster 'sds_cluster' match for URL '/v1/registration/svc1'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   ':method':'GET'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   ':path':'/v1/registration/svc1'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   ':authority':'sds_cluster'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   'x-envoy-internal':'true'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   'x-forwarded-for':'172.18.0.3'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   'x-envoy-expected-rq-timeout-ms':'1000'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:251] [C0][S96779862561392]   ':scheme':'http'
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][pool] source/common/http/http1/conn_pool.cc:61] creating a new connection
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][info][client] source/common/http/codec_client.cc:21] [C2] connecting
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][connection] source/common/network/connection_impl.cc:420] [C2] connecting to 172.18.0.2:80
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][connection] source/common/network/connection_impl.cc:429] [C2] connection in progress
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][pool] source/common/http/http1/conn_pool.cc:87] queueing request due to no available connections
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][pool] source/common/http/http1/conn_pool.cc:182] [C1] response complete
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][pool] source/common/http/http1/conn_pool.cc:202] [C1] moving to ready
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][http] source/common/http/http1/codec_impl.cc:299] [C1] parsed 453 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:379] [C1] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][main] source/common/event/dispatcher_impl.cc:46] clearing deferred deletion list (size=1)
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:268] [C1] socket event: 2
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:379] [C1] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:268] [C2] socket event: 2
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:379] [C2] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][connection] source/common/network/connection_impl.cc:389] [C2] connected
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][client] source/common/http/codec_client.cc:50] [C2] connected
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][pool] source/common/http/http1/conn_pool.cc:207] [C2] attaching to next request
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][debug][router] source/common/router/router.cc:737] [C0][S96779862561392] pool ready
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:252] [C2] writing 167 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:358] [C2] write returns: 167
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:268] [C2] socket event: 2
+[36menvoy    |[0m [2017-07-14 11:02:20.539][1][trace][connection] source/common/network/connection_impl.cc:379] [C2] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][connection] source/common/network/connection_impl.cc:268] [C2] socket event: 3
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][connection] source/common/network/connection_impl.cc:308] [C2] read returns: 249
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][connection] source/common/network/connection_impl.cc:308] [C2] read returns: -1
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][connection] source/common/network/connection_impl.cc:316] [C2] read error: 11
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:282] [C2] parsing 249 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Server value=nginx/1.11.4
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Date value=Fri, 14 Jul 2017 11:02:20 GMT
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Content-Type value=application/octet-stream
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Content-Length value=0
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Last-Modified value=Fri, 14 Jul 2017 10:34:07 GMT
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Connection value=keep-alive
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=ETag value="59689e1f-0"
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:338] [C2] headers complete
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:269] [C2] completed header: key=Accept-Ranges value=bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][router] source/common/router/router.cc:465] [C0][S96779862561392] upstream headers complete: end_stream=false
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:75] async http request response headers (end_stream=false):
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'server':'nginx/1.11.4'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'date':'Fri, 14 Jul 2017 11:02:20 GMT'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'content-type':'application/octet-stream'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'content-length':'0'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'last-modified':'Fri, 14 Jul 2017 10:34:07 GMT'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'connection':'keep-alive'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'etag':'"59689e1f-0"'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'accept-ranges':'bytes'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   ':status':'200'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][http] source/common/http/async_client_impl.cc:78]   'x-envoy-upstream-service-time':'0'
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][client] source/common/http/codec_client.cc:79] [C2] response complete
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][main] source/common/event/dispatcher_impl.cc:116] item added to deferred deletion list (size=1)
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/async_client_impl.cc:89] async http request response data (length=0 end_stream=true)
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][info][upstream] source/common/upstream/cluster_manager_impl.cc:77] cm init: removing: cluster=svc1 primary=0 secondary=0
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][warning][main] source/server/server.cc:212] all clusters initialized. initializing init manager
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][warning][config] source/server/listener_manager_impl.cc:441] all dependencies initialized. starting workers
+[36menvoy    |[0m [2017-07-14 11:02:20.540][7][info][main] source/server/worker_impl.cc:104] worker entering dispatch loop
+[36menvoy    |[0m [2017-07-14 11:02:20.540][8][info][main] source/server/worker_impl.cc:104] worker entering dispatch loop
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][upstream] source/common/upstream/sds_subscription.cc:79] sds refresh failure for cluster: svc1
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][warning][upstream] source/common/upstream/sds_subscription.cc:82] sds parsing error: JSON supplied is not valid. Error(offset 0, line 1): The document is empty.
+[36menvoy    |[0m 
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][upstream] source/common/upstream/sds_subscription.cc:95] sds refresh complete for cluster: svc1
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][pool] source/common/http/http1/conn_pool.cc:182] [C2] response complete
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][debug][pool] source/common/http/http1/conn_pool.cc:202] [C2] moving to ready
+[36menvoy    |[0m [2017-07-14 11:02:20.540][9][info][main] source/server/worker_impl.cc:104] worker entering dispatch loop
+[36menvoy    |[0m [2017-07-14 11:02:20.540][10][info][main] source/server/worker_impl.cc:104] worker entering dispatch loop
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][http] source/common/http/http1/codec_impl.cc:299] [C2] parsed 249 bytes
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][connection] source/common/network/connection_impl.cc:379] [C2] write ready
+[36menvoy    |[0m [2017-07-14 11:02:20.540][1][trace][main] source/common/event/dispatcher_impl.cc:46] clearing deferred deletion list (size=1)
+[36menvoy    |[0m [2017-07-14 11:02:25.537][1][debug][main] source/server/server.cc:89] flushing stats
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for eds
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 3750 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for pause
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 3124 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/upstream/upstream_impl.cc:443] starting async DNS resolution for eds
+[36menvoy    |[0m [2017-07-14 11:02:25.538][1][debug][upstream] source/common/network/dns_impl.cc:129] Setting DNS resolution timer for 3124 milliseconds
+[36menvoy    |[0m [2017-07-14 11:02:25.539][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for eds
+[36menvoy    |[0m [2017-07-14 11:02:25.539][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for eds
+[36menvoy    |[0m [2017-07-14 11:02:25.539][1][debug][upstream] source/common/upstream/upstream_impl.cc:450] async DNS resolution complete for pause
+[36menvoy    |[0m [2017-07-14 11:02:25.539][1][debug][upstream] source/common/upstream/upstream_impl.cc:467] DNS hosts have changed for pause
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:101] Caught Segmentation fault, suspect faulting address 0x0
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:85] Backtrace obj</usr/local/bin/envoy> thr<7> (use tools/stack_decode.py):
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #0 0x4b3fcd
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #1 0x4b4baa
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #2 0x4bbb73
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #3 0x4aa06c
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #4 0x4aa33c
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #5 0x492aa5
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #6 0x7d7017
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #7 0x7d757e
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #8 0x490148
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #9 0x7e0ccd
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:93] thr<7> obj</lib/x86_64-linux-gnu/libpthread.so.0>
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #10 0x7fb49573f183
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:93] thr<7> obj</lib/x86_64-linux-gnu/libc.so.6>
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:95] thr<7> #11 0x7fb49546bffc
+[36menvoy    |[0m [2017-07-14 11:02:25.539][7][critical][backtrace] bazel-out/local-opt/bin/source/server/_virtual_includes/backtrace_lib/server/backtrace.h:97] end backtrace thread 7
