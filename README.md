@@ -1,6 +1,6 @@
 # envoy-pvmc
 
-when there are both CDS/SDS, and CDS have service that SDS return an empty body, envoy will falut with "pure virtual method called".
+when there are both CDS/SDS, and CDS have service that SDS return an empty body, envoy will falut with "pure virtual method called" on DNS callback.
 
 this *docker-compose* reproduce it.
 
