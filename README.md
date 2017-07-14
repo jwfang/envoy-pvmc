@@ -19,7 +19,7 @@ NOTE: i am using the **lyft/envoy** image here, it have *signal_trace=enabled*, 
 the *logs* dir have some already captured envoy trace logs, for your convenience.
 
 ## NOTE
-1. i tested a *sds* cluster with out CDS, no fault
+1. i tested a *sds* cluster with out CDS, no fault. it's in *sds-only* branch.
 
 ## FAQ
 1. why there are docker ? since i encounter this when run it by docker-compose, and it falut on DNS callbacks.
