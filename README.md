@@ -8,7 +8,7 @@ NOTE: i am using the **lyft/envoy** image here, it have *signal_trace=enabled*, 
 
 ## what's in the *docker-compose*
 
-1. *eds*, a fake CDS/RDS service
+1. *eds*, a fake CDS/RDS service, just return content from *eds* directory
 2. *pause*, it do nothing, just a place-holder
 3. *envoy*, of course
 
