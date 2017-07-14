@@ -18,6 +18,8 @@ NOTE: i am using the **lyft/envoy** image here, it have *signal_trace=enabled*, 
 
 the *logs* dir have some already captured envoy trace logs, for your convenience.
 
-## TODOs
-1. i am not sure CDS it really needed, maybe a *sds* cluster also works
-2. why there are docker ? since i encounter this when run it by docker-compose, and it falut on DNS callbacks.
+## NOTE
+1. i tested a *sds* cluster with out CDS, no fault
+
+## FAQ
+1. why there are docker ? since i encounter this when run it by docker-compose, and it falut on DNS callbacks.
