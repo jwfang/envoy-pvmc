@@ -26,6 +26,13 @@
             "connect_timeout_ms": 250,
             "lb_type": "round_robin",
             "hosts": [{"url": "tcp://pause:444"}]
+          },
+           {
+            "name": "svc1",
+            "service_name": "svc1",
+            "type": "sds",
+            "connect_timeout_ms": 250,
+            "lb_type": "round_robin"
           }
     ],
     "sds" :
@@ -33,18 +40,6 @@
             "cluster":
             {
                     "name": "sds_cluster",
-                    "type": "strict_dns",
-                    "connect_timeout_ms": 250,
-                    "lb_type": "round_robin",
-                    "hosts": [{"url": "tcp://eds:80"}]
-            },
-            "refresh_delay_ms": 30000
-    },
-    "cds" :
-    {
-            "cluster":
-            {
-                    "name": "cds_cluster",
                     "type": "strict_dns",
                     "connect_timeout_ms": 250,
                     "lb_type": "round_robin",
